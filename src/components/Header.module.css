@@ -9,6 +9,7 @@
   margin: 0 auto;
   right: 0;
   z-index: 1000;
+  max-width: 1450px;
   background-color: var(--color-dark-bg);
 }
 
