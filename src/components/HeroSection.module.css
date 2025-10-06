@@ -1,0 +1,165 @@
+.hero {
+  background-color: var(--color-white);
+  border-radius: var(--radius-large);
+  padding: 2.5rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2px;
+  min-height: 360px;
+  position: relative;
+  z-index: 1;
+}
+
+.heroContent {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  flex: 1;
+}
+
+.heroText {
+  flex: 1;
+}
+
+.title {
+  font-size: var(--font-size-8xl);
+  font-weight: 900;
+  transform: scaleY(1.14);
+  line-height: 0.9;
+  font-family: var(--font-family-sans);
+  color: var(--color-black);
+}
+
+.heroRight {
+  color: var(--color-black);
+  min-width: 320px;
+  display: flex;
+  text-align: right;
+  flex-direction: column;
+  margin-top: 2.7rem;
+  gap: 0.9375rem;
+}
+
+.heroRight h2 {
+  font-size: var(--font-size-4xl);
+  font-weight: 700;
+  line-height: 1.2;
+  max-width: 440px;
+  letter-spacing: 1px;
+}
+
+.phoneNumber {
+  font-size: var(--font-size-3xl);
+  line-height: 2.975rem;
+  letter-spacing: 0.025rem;
+  font-weight: bold;
+  color: var(--color-primary);
+}
+
+.addresses {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9375rem;
+}
+
+.address {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3125rem;
+  position: relative;
+  font-size: 0.9645rem;
+  letter-spacing: -0.0145rem;
+  line-height: normal;
+  cursor: pointer;
+}
+
+.addressBlock {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.125rem;
+  align-items: center;
+}
+
+@media (max-width: 1250px) {
+  .title {
+    font-size: 8.125rem;
+  }
+}
+
+@media (max-width: 1050px) {
+  .hero {
+    flex-direction: column;
+    gap: 1.875rem;
+  }
+
+  .heroContent {
+    width: 100%;
+  }
+
+  .title {
+    font-size: 5rem;
+  }
+
+  .heroRight {
+    width: 100%;
+    text-align: left;
+    margin-top: 0;
+    min-width: unset;
+  }
+
+  .heroRight h2 {
+    font-size: 1.75rem;
+    max-width: 100%;
+  }
+
+  .phoneNumber {
+    font-size: 1.75rem;
+  }
+
+  .addressBlock {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    margin-top: 5.875rem;
+    border-radius: 38px;
+  }
+
+  .phoneNumber {
+    font-size: 1.5rem;
+  }
+
+  .address {
+    font-size: var(--font-size-sm);
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 2.4rem 2.7rem;
+  }
+
+  .title {
+    font-size: 3rem;
+  }
+
+  .heroRight h2 {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .hero {
+    padding: 3.125rem 2.25rem;
+  }
+
+  .phoneNumber {
+    font-size: 1.25rem;
+  }
+
+  .address {
+    font-size: 0.6875rem;
+  }
+}

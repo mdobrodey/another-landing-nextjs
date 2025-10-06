@@ -1,0 +1,171 @@
+.container {
+  color: var(--color-white);
+  font-family: var(--font-family-primary);
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+/* main */
+.main {
+  padding: 0 10px;
+  margin-top: 5.6875rem;
+}
+
+/* services section */
+.services {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  margin-bottom: 2px;
+  grid-auto-rows: auto;
+}
+
+/* doctors section */
+.doctorsSection {
+  background-color: var(--color-white);
+  border-radius: var(--radius-large);
+  display: flex;
+  max-width: 100%;
+  min-height: 800px;
+  margin-bottom: 2px;
+}
+
+.doctorsGrid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 5rem 3rem;
+  gap: 1.5rem;
+  align-content: start;
+  border-radius: 0 var(--radius-large) var(--radius-large) 0;
+  overflow: hidden;
+}
+
+/* projects section */
+.projectsSection {
+  background-color: var(--color-dark-bg);
+  border-radius: var(--radius-large);
+  padding: 3.75rem 3.125rem 5rem;
+  margin-bottom: 2px;
+  text-align: center;
+}
+
+.projectsHeader {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.875rem;
+}
+
+.projectsTitle {
+  font-size: var(--font-size-5xl);
+  font-weight: 700;
+  color: var(--color-white);
+  line-height: 1.3;
+}
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.875rem;
+  margin-top: 3.125rem;
+}
+
+/* media queries */
+@media (max-width: 1400px) {
+  .doctorsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 1250px) {
+  .services {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .doctorsSection {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .doctorsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0.875rem 2.5rem 2.5rem 2.5rem;
+    border-radius: 0 0 var(--radius-large) var(--radius-large);
+  }
+
+  .projectsSection {
+    padding: 3.125rem 2.5rem 4.375rem;
+  }
+
+  .projectsGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5625rem;
+  }
+}
+
+@media (max-width: 1050px) {
+  .main {
+    padding: 0 12px;
+  }
+
+  .projectsSection {
+    padding: 2.5rem 1.875rem 3.75rem;
+  }
+
+  .projectsTitle {
+    font-size: var(--font-size-3xl);
+  }
+}
+
+@media (max-width: 968px) {
+  .doctorsSection {
+    flex-direction: column;
+  }
+
+  .doctorsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 910px) {
+  .services {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    margin-top: 4.375rem;
+  }
+
+  .doctorsSection {
+    border-radius: var(--radius-large);
+  }
+
+  .doctorsGrid {
+    padding: 1.5625rem;
+    gap: 1.25rem;
+    border-radius: 0 0 30px 30px;
+  }
+
+  .projectsSection {
+    border-radius: 30px;
+    padding: 1.875rem 1.5625rem 3.125rem;
+  }
+
+  .projectsTitle {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .doctorsGrid {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .projectsTitle {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,145 @@
+.doctorsSidebar {
+  background-color: var(--color-white);
+  padding: 5.5rem 3rem;
+  width: 320px;
+  position: sticky;
+  top: 1.25rem;
+  align-self: flex-start;
+  height: fit-content;
+  max-height: calc(100vh - 40px);
+  border-radius: var(--radius-large) 0 0 var(--radius-large);
+}
+
+.doctorsTitle {
+  font-size: var(--font-size-4xl);
+  color: var(--color-black);
+  margin: 0.625rem 0 1.5rem 0;
+  font-family: var(--font-family-bold);
+  line-height: 1.2;
+}
+
+.specialtyItem {
+  padding: 0.5rem 0;
+  font-size: var(--font-size-lg);
+  color: var(--color-text-gray);
+  cursor: pointer;
+  transition: color var(--transition-fast);
+}
+
+.specialtyItem:hover {
+  color: var(--color-primary-light);
+}
+
+.specialtiesDropdown {
+  display: none;
+}
+
+.dropdownToggle {
+  width: 100%;
+  padding: 0.9375rem 1.25rem;
+  background-color: var(--color-bg-gray);
+  border: none;
+  border-radius: var(--radius-small);
+  color: var(--color-black);
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color var(--transition-fast);
+}
+
+.dropdownToggle:hover {
+  background-color: rgba(217, 217, 217, 0.3);
+}
+
+.dropdownToggle::after {
+  content: '+';
+  font-size: var(--font-size-xl);
+  transition: transform var(--transition-medium);
+}
+
+.dropdownToggle.open::after {
+  transform: rotate(180deg);
+}
+
+.specialtiesDropdownList {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--transition-medium) ease-out;
+  margin-top: 0.625rem;
+  background-color: rgba(217, 217, 217, 0.1);
+  border-radius: 15px;
+}
+
+.specialtiesDropdownList.open {
+  max-height: 240px;
+  overflow-y: auto;
+  padding: 0.625rem 0;
+}
+
+.specialtiesDropdownList .specialties {
+  display: flex !important;
+  flex-direction: column;
+}
+
+.specialtiesDropdownList .specialtyItem {
+  padding: 0.625rem 1.25rem;
+  cursor: pointer;
+}
+
+.specialties {
+  display: flex;
+  flex-direction: column;
+}
+
+.doctorsSidebar > .specialties {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 1250px) {
+  .doctorsSidebar {
+    position: static;
+    max-height: none;
+    width: 100%;
+    padding: 3.75rem 2.5rem 0 2.5rem;
+    border-radius: var(--radius-large) var(--radius-large) 0 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+
+  .doctorsSidebar > .specialties {
+    display: none !important;
+  }
+
+  .specialtiesDropdown {
+    display: block;
+  }
+}
+
+@media (max-width: 968px) {
+  .doctorsSidebar {
+    width: 100%;
+    position: static;
+    max-height: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .doctorsSidebar {
+    padding: 2.5rem 2rem 0 2rem;
+    border-radius: 38px;
+  }
+
+  .doctorsTitle {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .doctorsTitle {
+    font-size: 1.5rem;
+  }
+}

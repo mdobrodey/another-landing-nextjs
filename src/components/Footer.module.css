@@ -1,0 +1,222 @@
+.addresses {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9375rem;
+}
+
+.address {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3125rem;
+  position: relative;
+  font-size: 0.9645rem;
+  letter-spacing: -0.0145rem;
+  line-height: normal;
+  cursor: pointer;
+}
+
+.addressBlock {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.125rem;
+  align-items: center;
+}
+
+.footer {
+  background-color: var(--color-dark-bg);
+  border-radius: var(--radius-large);
+  padding: 2.5rem 5rem;
+  color: var(--color-white);
+}
+
+.footerTop {
+  display: flex;
+  justify-content: space-between;
+  gap: 7.5rem;
+  margin-bottom: 3.75rem;
+}
+
+.footerBrand {
+  flex: 0 0 auto;
+  max-width: 350px;
+}
+
+.footerLogo {
+  font-size: var(--font-size-6xl);
+  transform: scaleX(1.2);
+  margin-left: 10%;
+  text-align: left;
+  max-width: 300px;
+  font-weight: 900;
+  margin-bottom: 2.5rem;
+  font-family: var(--font-family-sans);
+  line-height: 1.1;
+}
+
+.footerContact {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5625rem;
+  margin-top: 3.125rem;
+}
+
+.footerContact > div:first-child {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footerPhone {
+  font-size: var(--font-size-2xl);
+  font-family: var(--font-family-bold);
+  margin-top: 0.3125rem;
+}
+
+.footerPhoneNumber {
+  font-size: var(--font-size-lg);
+}
+
+.footerNav {
+  flex: 1;
+  display: flex;
+  gap: 6.25rem;
+  justify-content: flex-end;
+}
+
+.footerColumn {
+  flex: 0 0 auto;
+}
+
+.footerColumn h4 {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  margin: 0 0 1.25rem 0;
+  text-transform: uppercase;
+  font-size: var(--font-size-xs);
+  color: var(--color-text-gray);
+  letter-spacing: 0.03125rem;
+}
+
+.footerColumn a {
+  color: var(--color-white);
+  text-decoration: none;
+  font-size: var(--font-size-2xl);
+  display: block;
+  margin-bottom: 0.9375rem;
+  transition: color var(--transition-fast);
+}
+
+.footerColumn a:hover {
+  color: var(--color-primary-light);
+}
+
+.footerBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--color-border);
+  font-size: var(--font-size-xs);
+  color: var(--color-text-gray);
+}
+
+.footerBottom > div:first-child {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3125rem;
+}
+
+.footerSocial {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.footerSocialIcon {
+  width: 45px;
+  height: 45px;
+  background-color: var(--color-white);
+  border-radius: var(--radius-round);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-black);
+  transition: transform var(--transition-fast);
+  cursor: pointer;
+}
+
+.footerSocialIcon:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 1050px) {
+  .addressBlock {
+    justify-content: flex-start;
+  }
+
+  .footer {
+    padding: 2.5rem 1.875rem;
+  }
+
+  .footerTop {
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .footerBrand {
+    max-width: 100%;
+  }
+
+  .footerNav {
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .footerLogo {
+    margin-left: 5%;
+  }
+}
+
+@media (max-width: 768px) {
+  .address {
+    font-size: var(--font-size-sm);
+  }
+
+  .footer {
+    border-radius: 30px;
+    padding: 1.875rem 1.5625rem;
+  }
+
+  .footerLogo {
+    font-size: 2.5rem;
+  }
+
+  .footerPhone {
+    font-size: var(--font-size-xl);
+  }
+
+  .footerColumn h4 {
+    font-size: 0.625rem;
+  }
+
+  .footerColumn a {
+    font-size: var(--font-size-base);
+  }
+}
+
+@media (max-width: 600px) {
+  .footerLogo {
+    margin-left: 7% !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .footerLogo {
+    margin-left: 8.4% !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .address {
+    font-size: 0.6875rem;
+  }
+}

@@ -1,0 +1,590 @@
+.header {
+  display: flex;
+  align-items: center;
+  gap: 1.625rem;
+  padding: 1.25rem 6.25rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0 auto;
+  right: 0;
+  z-index: 1000;
+  background-color: var(--color-dark-bg);
+}
+
+.logo {
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+
+.heartIcon {
+  font-size: var(--font-size-3xl);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.searchBar {
+  flex: 0 0 200px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  transition: flex-basis var(--transition-medium) ease;
+}
+
+.searchBar.focused {
+  flex: 0 0 320px;
+}
+
+.searchBar input {
+  width: 100%;
+  padding: 0.5rem 2.8125rem 0.5rem 0.9375rem;
+  border-radius: var(--radius-small);
+  outline: none;
+  border: none;
+  background-color: var(--color-white);
+  font-size: var(--font-size-sm);
+}
+
+.searchBtn {
+  position: absolute;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary-light);
+  padding: 0.3125rem;
+}
+
+.headerInfo {
+  display: flex;
+  gap: 2.5rem;
+  font-size: 0.8125rem;
+  flex: 1;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.phoneContainer {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+}
+
+.phone {
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+}
+
+.phoneBtn {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.addressBox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid var(--color-white);
+  border-radius: var(--radius-small);
+  padding: 0.5rem 0.9375rem;
+}
+
+.addressIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.menuIcon {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  background-color: var(--color-white);
+  color: var(--color-black);
+  border-radius: var(--radius-round);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  transition: transform var(--transition-fast);
+  z-index: 10001;
+  position: relative;
+}
+
+.menuIcon:hover {
+  transform: scale(1.05);
+}
+
+.menuIcon.open {
+  background-color: transparent;
+  color: var(--color-white);
+  font-size: 2.5rem;
+  position: fixed;
+  top: 1.25rem;
+  right: 6.25rem;
+}
+
+/* fullscreen menu */
+.fullscreenMenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color-dark-card);
+  z-index: 2000;
+  display: flex;
+  padding: 3.75rem 6.25rem;
+  color: var(--color-white);
+  transform-origin: top;
+  transition: transform var(--transition-slow) ease-out,
+    opacity var(--transition-slow) ease-out;
+}
+
+.fullscreenMenu.open {
+  animation: slideDown var(--transition-slow) ease-out;
+}
+
+.fullscreenMenu.closing {
+  animation: slideUp var(--transition-slow) ease-out forwards;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+.menuLeft {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  margin-top: 2.25rem;
+}
+
+.menuLogo {
+  font-size: var(--font-size-7xl);
+  font-weight: 900;
+  transform: scaleX(1.2);
+  margin-left: 10%;
+}
+
+.menuContact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9375rem;
+}
+
+.menuContact h3 {
+  font-size: var(--font-size-lg);
+  font-weight: 400;
+  margin: 0;
+  color: var(--color-text-light-gray);
+}
+
+.menuLocation {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 1.1875rem;
+}
+
+.menuPhone {
+  font-size: 2.125rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.9375rem;
+}
+
+.menuHours {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-light-gray);
+}
+
+.menuSocial {
+  display: flex;
+  gap: 0.9375rem;
+}
+
+.socialIcon {
+  width: 45px;
+  height: 45px;
+  background-color: var(--color-white);
+  color: var(--color-black);
+  border-radius: var(--radius-round);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-xl);
+  cursor: pointer;
+  transition: transform var(--transition-fast);
+}
+
+.socialIcon:hover {
+  transform: scale(1.1);
+}
+
+.menuRight {
+  flex: 1;
+  display: flex;
+  gap: 5rem;
+  padding-left: 6.25rem;
+}
+
+.menuNav {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5625rem;
+  margin-top: 2.25rem;
+}
+
+.menuNav h3 {
+  font-size: 1.875rem;
+  font-weight: 600;
+  margin: 0 0 0.625rem 0;
+}
+
+.menuNav a {
+  color: var(--color-white);
+  text-decoration: none;
+  font-size: 1.625rem;
+  transition: color var(--transition-fast);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menuNav a:hover {
+  color: var(--color-primary-light);
+}
+
+.menuCards {
+  display: flex;
+  gap: 1.25rem;
+  margin-top: 1.875rem;
+}
+
+.menuCard {
+  background: var(--color-dark-secondary);
+  border-radius: var(--radius-small);
+  padding: 1.875rem;
+  flex: 1;
+  height: 100%;
+  max-height: 350px;
+  color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: transform var(--transition-fast) ease;
+}
+
+.menuCard:hover {
+  transform: translateY(-5px);
+}
+
+.cardArrow {
+  display: flex;
+  justify-content: flex-end;
+  color: var(--color-white);
+  opacity: 0.7;
+}
+
+.cardContent {
+  margin-top: auto;
+}
+
+.menuCard h4 {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  margin: 0 0 0.625rem 0;
+  text-align: left;
+}
+
+.menuCard p {
+  font-size: var(--font-size-sm);
+  opacity: 0.9;
+  text-align: left;
+}
+
+@media (max-width: 1500px) {
+  .menuCard:first-child {
+    display: none;
+  }
+}
+
+@media (max-width: 1320px) {
+  .headerTime {
+    display: none;
+  }
+}
+
+@media (max-width: 1250px) {
+  .fullscreenMenu {
+    padding: 2.5rem 3.125rem;
+  }
+
+  .menuRight {
+    padding-left: 3.125rem;
+    gap: 2.5rem;
+  }
+
+  .menuIcon.open {
+    right: 2.5rem;
+  }
+}
+
+@media (max-width: 1060px) {
+  .addressBox {
+    display: none;
+  }
+}
+
+@media (max-width: 1050px) {
+  .menuIcon.open {
+    right: 2.5rem;
+  }
+
+  .menuIcon {
+    position: relative;
+    z-index: 999;
+  }
+
+  .menuIcon.open {
+    position: fixed;
+    right: 2.5rem;
+    z-index: 10001;
+  }
+
+  .logo::after {
+    content: '';
+    position: fixed;
+    width: 110px;
+    top: 89.6px;
+    left: 11px;
+    height: 110px;
+    background: radial-gradient(circle at center, transparent 71%, #1b1b29 40%);
+    clip-path: polygon(0 0, 53% 0, 1% 50%, 0% 50%);
+    z-index: 999;
+  }
+
+  .logo::before {
+    content: '';
+    position: fixed;
+    width: 110px;
+    top: 90px;
+    right: 11px;
+    height: 110px;
+    transform: rotate(90deg);
+    background: radial-gradient(circle at center, transparent 71%, #1b1b29 40%);
+    clip-path: polygon(0 0, 53% 0, 1% 50%, 0% 50%);
+    z-index: 999;
+  }
+}
+
+@media (max-width: 910px) {
+  .fullscreenMenu {
+    padding: 2.5rem 1.875rem;
+    flex-direction: column;
+  }
+
+  .menuLeft {
+    width: 100%;
+    gap: 1.5rem;
+  }
+
+  .menuLogo {
+    font-size: 3.5rem;
+  }
+
+  .menuPhone {
+    font-size: 1.75rem;
+  }
+
+  .menuRight {
+    width: 100%;
+    margin-top: 1.875rem;
+    padding-left: 0;
+    flex-direction: column;
+    gap: 1.875rem;
+  }
+
+  .menuCards {
+    display: none;
+  }
+
+  .menuNav a {
+    font-size: 1.375rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .searchBar.focused {
+    flex: 0 0 220px;
+  }
+
+  .menuIcon.open {
+    right: 1.25rem;
+    top: 0.9375rem;
+  }
+
+  .header {
+    padding: 1.25rem 3.125rem;
+  }
+
+  .logo::after {
+    content: '';
+    position: fixed;
+    width: 74px;
+    top: 89.6px;
+    left: 11px;
+    height: 74px;
+    background: radial-gradient(circle at center, transparent 71%, #1b1b29 40%);
+    clip-path: polygon(0 0, 53% 0, 1% 50%, 0% 50%);
+    z-index: 999;
+  }
+
+  .logo::before {
+    content: '';
+    position: fixed;
+    width: 74px;
+    top: 90px;
+    right: 11px;
+    height: 74px;
+    transform: rotate(90deg);
+    background: radial-gradient(circle at center, transparent 71%, #1b1b29 40%);
+    clip-path: polygon(0 0, 53% 0, 1% 50%, 0% 50%);
+    z-index: 999;
+  }
+
+  .fullscreenMenu {
+    padding: 1.875rem 1.25rem;
+  }
+
+  .menuLogo {
+    font-size: var(--font-size-6xl);
+  }
+
+  .menuLocation {
+    font-size: var(--font-size-base);
+  }
+
+  .menuPhone {
+    font-size: 1.5rem;
+  }
+
+  .menuNav h3 {
+    font-size: 1.5rem;
+  }
+
+  .menuNav a {
+    font-size: var(--font-size-xl);
+  }
+}
+
+@media (max-width: 690px) {
+  .phoneContainer {
+    display: none;
+  }
+
+  .menuNav {
+    gap: 1rem;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    gap: 0 !important;
+  }
+
+  .logo::after {
+    content: '';
+    position: fixed;
+    width: 74px;
+    top: 79.4px;
+    left: 11.6px;
+    height: 74px;
+    background: radial-gradient(circle at center, transparent 71%, #1b1b29 40%);
+    clip-path: polygon(0 0, 53% 0, 1% 50%, 0% 50%);
+    z-index: 999;
+  }
+
+  .logo::before {
+    content: '';
+    position: fixed;
+    width: 74px;
+    top: 79.4px;
+    right: 11.6px;
+    height: 74px;
+    transform: rotate(90deg);
+    background: radial-gradient(circle at center, transparent 71%, #1b1b29 40%);
+    clip-path: polygon(0 0, 53% 0, 1% 50%, 0% 50%);
+    z-index: 999;
+  }
+
+  .menuIcon {
+    gap: 0;
+  }
+
+  .heartIcon {
+    display: none;
+  }
+
+  .menuLogo {
+    font-size: 2.5rem;
+  }
+
+  .menuNav h3 {
+    font-size: var(--font-size-xl);
+  }
+
+  .menuNav a {
+    font-size: var(--font-size-lg);
+  }
+}
+
+@media (max-width: 400px) {
+  .header {
+    padding: 1.25rem 1rem;
+    max-width: 100%;
+  }
+
+  .header > * {
+    margin-left: 4px;
+    margin-right: 4px;
+  }
+
+  .menuLocation {
+    font-size: var(--font-size-sm);
+    align-items: center;
+  }
+
+  .menuPhone {
+    font-size: var(--font-size-xl);
+  }
+}

@@ -1,0 +1,197 @@
+.services {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  margin-bottom: 2px;
+  grid-auto-rows: auto;
+}
+
+.serviceCard {
+  background-color: var(--color-white);
+  color: var(--color-black);
+  border-radius: var(--radius-large);
+  padding: 3rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  max-width: 100%;
+}
+
+.tallCard {
+  grid-row: span 2;
+  min-height: 820px;
+}
+
+.serviceHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.9375rem;
+}
+
+.serviceHeader h3 {
+  font-size: var(--font-size-3xl);
+  max-width: 270px;
+  line-height: 1.2;
+  font-family: var(--font-family-bold);
+  flex: 1;
+}
+
+.serviceLabel {
+  font-size: var(--font-size-xs);
+  white-space: nowrap;
+  text-transform: uppercase;
+  align-self: flex-start;
+  line-height: 1.125rem;
+  color: lightgrey;
+  font-weight: 700;
+}
+
+.servicePrice {
+  font-size: var(--font-size-sm);
+  color: var(--color-black);
+  height: max-content;
+  width: max-content;
+  line-height: 1.25rem;
+  font-weight: normal;
+  border-radius: var(--radius-large);
+  min-width: max-content;
+  padding: 0.25rem 0.75rem;
+  background-color: var(--color-price-bg);
+}
+
+.serviceDescription {
+  font-size: var(--font-size-sm);
+  line-height: 1.6;
+  color: var(--color-text-gray);
+}
+
+.serviceBtn {
+  background: var(--color-primary-gradient);
+  color: var(--color-white);
+  border: none;
+  display: flex;
+  padding: 0.875rem 1.75rem;
+  border-radius: 25px;
+  font-weight: 600;
+  margin-top: auto;
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+  transition: transform var(--transition-fast);
+  width: fit-content;
+}
+
+.serviceBtn:hover {
+  transform: scale(1.05);
+}
+
+.serviceLink {
+  color: #007bff;
+  text-decoration: none;
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3125rem;
+  transition: gap var(--transition-fast);
+  margin-top: auto;
+}
+
+.serviceLink:hover {
+  gap: 0.625rem;
+}
+
+.topOperations {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  flex: 1;
+}
+
+.operationItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 0.9375rem;
+  border-bottom: 1px solid var(--color-primary);
+  gap: 1.5rem;
+}
+
+.operationItem:first-child {
+  border-top: 1px solid var(--color-primary);
+  padding-top: 1.25rem;
+}
+
+.operationItem span:first-child {
+  font-size: var(--font-size-lg);
+  line-height: 1.4;
+  flex: 1;
+}
+
+.operationPrice {
+  font-size: var(--font-size-sm);
+  color: var(--color-black);
+  height: max-content;
+  width: max-content;
+  line-height: 1.25rem;
+  font-weight: normal;
+  border-radius: var(--radius-large);
+  min-width: max-content;
+  padding: 0.25rem 0.75rem;
+  background-color: var(--color-price-bg);
+}
+
+@media (max-width: 1250px) {
+  .services {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tallCard {
+    grid-row: span 1;
+    min-height: 400px;
+  }
+
+  .serviceCard:last-child {
+    display: none;
+  }
+}
+
+@media (max-width: 1050px) {
+  .services {
+    grid-template-columns: 1fr;
+  }
+
+  .serviceCard {
+    padding: 2.5rem;
+  }
+}
+
+@media (max-width: 910px) {
+  .services {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .serviceCard {
+    border-radius: 38px;
+    padding: 3rem 2rem;
+    gap: 1.25rem;
+  }
+
+  .serviceHeader h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .serviceHeader h3 {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .serviceLabel {
+    display: none;
+  }
+}

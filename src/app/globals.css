@@ -1,0 +1,210 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+body {
+  background-color: #1b1b29;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: 'Sans';
+  src: url('/fonts/regular.woff2') format('woff2');
+  font-weight: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter_Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter-Bold';
+  src: url('/fonts/Inter_Bold.woff2') format('woff2');
+  font-weight: normal;
+  font-display: swap;
+}
+
+:root {
+  --color-primary: #0142ff;
+  --color-primary-light: #5b7cff;
+  --color-primary-gradient: linear-gradient(135deg, #476fe6, #1e4fe1);
+  --color-blue-gradient: linear-gradient(135deg, #007aff, #0051ff);
+  --color-white: #fff;
+  --color-black: #000;
+  --color-dark-bg: #1b1b29;
+  --color-dark-card: #1a1d2e;
+  --color-dark-secondary: rgba(35, 35, 55, 1);
+  --color-text-gray: #666;
+  --color-text-light-gray: #aaa;
+  --color-text-lighter-gray: #999;
+  --color-bg-light: #f0f0f0;
+  --color-bg-gray: rgba(217, 217, 217, 0.2);
+  --color-border: rgba(255, 255, 255, 0.1);
+  --color-price-bg: rgb(227, 233, 240);
+
+  --unit: calc(0.0625 * 1rem);
+  --radius-large: calc(var(--unit) * 60);
+  --radius-medium: 40px;
+  --radius-small: 20px;
+  --radius-round: 50%;
+
+  --font-family-primary: 'Inter', sans-serif;
+  --font-family-bold: 'Inter-Bold', sans-serif;
+  --font-family-sans: 'Sans', sans-serif;
+
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 2rem;
+  --font-size-4xl: 2.25rem;
+  --font-size-5xl: 2.75rem;
+  --font-size-6xl: 3rem;
+  --font-size-7xl: 4.875rem;
+  --font-size-8xl: 9rem;
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.1);
+
+  --transition-fast: 0.2s;
+  --transition-medium: 0.3s;
+  --transition-slow: 0.5s;
+  --transition-very-slow: 0.6s;
+}
+
+/* * {
+  outline: 1px solid red;
+}
+ */

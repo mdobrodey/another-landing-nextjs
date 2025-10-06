@@ -1,0 +1,81 @@
+.projectCard {
+  background-color: var(--color-white);
+  border-radius: 38px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-medium);
+}
+
+.projectCard:hover {
+  transform: translateY(-5px);
+}
+
+.projectImage {
+  width: 100%;
+  height: 280px;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--color-bg-light);
+}
+
+.projectContent {
+  padding: 1.875rem;
+  text-align: left;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.projectBrand {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  color: var(--color-black);
+  margin: 0 0 0.625rem 0;
+  line-height: 1.2;
+}
+
+.projectDescription {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--color-text-gray);
+  margin: 0 0 3rem 0;
+  flex: 1;
+}
+
+.projectLink {
+  color: var(--color-primary-light);
+  text-decoration: none;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3125rem;
+  transition: gap var(--transition-fast);
+}
+
+.projectLink:hover {
+  gap: 0.625rem;
+}
+
+@media (max-width: 768px) {
+  .projectCard {
+    border-radius: 34px;
+  }
+
+  .projectImage {
+    height: 220px;
+  }
+
+  .projectContent {
+    padding: 1.5625rem;
+  }
+
+  .projectBrand {
+    font-size: var(--font-size-xl);
+  }
+
+  .projectDescription {
+    margin-bottom: 1.875rem;
+  }
+}
