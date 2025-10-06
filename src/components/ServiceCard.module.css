@@ -188,6 +188,16 @@
   .serviceHeader h3 {
     font-size: 1.25rem;
   }
+
+  .operationPrice {
+    font-size: var(--font-size-xs);
+  }
+
+  .operationItem span:first-child {
+    font-size: var(--font-size-sm);
+    line-height: 1.4;
+    flex: 1;
+  }
 }
 
 @media (max-width: 400px) {
